@@ -1,0 +1,35 @@
+/**********TAG SELECTORS*********/
+
+body {
+    background-color: azure;
+}
+
+/* This got overrided by the class selector */
+img {
+    background-color: blue;
+}
+
+img:hover {
+    background-color: gold;
+}
+
+
+/***********CLASS SELECTORS**************/
+.Broccoli {
+    background-color: red;
+}
+
+.Bacon {
+    background-color: green;
+}
+
+h1 {
+    color: blue;  /* This got overrided by the id selector*/
+    font-size: 200px;
+}
+
+
+/**********+ID SELECTOR**********/
+#heading {
+    color: purple;
+}

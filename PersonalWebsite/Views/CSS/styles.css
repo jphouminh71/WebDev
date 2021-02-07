@@ -1,0 +1,17 @@
+body {
+    background-color: azure;
+}
+
+hr {
+    border-top: dotted;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-color: grey;
+    border-width: 5px;
+    width: 5%;
+}
+
+h3, h3 {
+    color: #66BFBF;
+}
