@@ -1,0 +1,39 @@
+/*
+    The divs automatically stick to the edges of the containing sub views.
+    don't put comments if you are adding tag attributes.
+    
+    Tip, place items in relation to eachout by applying
+    the margin as percentages in the divs.
+*/
+
+/**********TAG SELECTORS*********/
+body {
+    background-color: azure;
+    margin: 0px;
+}
+
+h1 {
+
+}
+
+/***********CLASS SELECTORS**************/
+.upper-container {
+    background-color: lightblue;
+    margin: 0px;
+    
+}
+
+.mid-container {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+}
+
+.lower-container {
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+}
+
+
+/**********+ID SELECTOR**********/
