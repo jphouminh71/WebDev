@@ -1,3 +1,33 @@
+<!-- Use spans to make inline edits that you can manipulate with css 
+
+    Common inline:
+        <span> <img> <a>
+
+        The width/height of these elements are fixed, so you can't change theheight
+
+    Common block elements
+        <div> <p>
+
+
+    Display property: 
+            p {
+                display: inline <-- this makes all p tags to inline elements
+                display: block <-- changes all p tags to block tags
+                display: inline-block 
+                display: none <-- gets rid of the elements, hides it and recalculates surrounding elements
+                visibility: hidden <-- hides the  eleemnt but doesn't readjust surrounding elements
+            }
+
+
+    Position Property: 
+        Static: Lets the html handle the positioning of elements 
+        Relative: we can specify distance relative to what html would have set it at
+        Absolute: we specify a position where the elemnt should be relative to its parent.
+        Fixed: The element we are fixing will mean that as we scroll through the page, it will stay fixed to the onscreen positioning
+
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,24 +41,153 @@
 </head>
 
 <body>
+
+    <!-- Upper container -->
     <div class="upper-container">
-        <img src="/BetterWebsite/Assets/cloud.png" alt="cloud-image">
-        <h1> Im Jonathan</h1>
-        <p> An aspiring iOS and Web Developer</p>
-        <img src="/BetterWebsite/Assets/cloud.png" alt="cloud-image">
+        <img class="top-cloud" src="/BetterWebsite/Assets/cloud.png" alt="cloud-image">
+        <h1> <em>Im Jonathan </em></h1>
+        <h2> An a<span class ="span">spiri</span>ng iOS and Web Developer</h2>
+        <img class="bottom-cloud" src="/BetterWebsite/Assets/cloud.png" alt="cloud-image">
         <img src="/BetterWebsite/Assets/mountain.png" alt="mountain-image">
     </div>
 
-    <div class="mid-container">
-
-    </div>
-
-    <div class="lower-container"></div>
-
-
-    </div>
+    <div class="middle-container">
+        <div class="profile">
+          <img class="profilepic" src="/BetterWebsite/Assets/cartoon.PNG" alt="cartoon=me">
+          <h2>Hello.</h2>
+          <p>Lorem ipsum dolor sit amet, vitae volutpat, dui conubia, dolor urna. Non auctor, montes nulla distinctio.</p>
+        </div>
+        <hr>
+        <div class="skills">
+          <h2>My Skills.</h2>
+          <div class="skill-row">
+            <img class="" src="/BetterWebsite/Assets/computer.png" alt="pc">
+            <h3>Coding </h3>
+            <p>Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum, nunc urna lectus, erat ligula. Hendrerit nam, lectus ante, ut lorem eros.</p>
+          </div>
+          <div class="skill-row">
+            <img class="" src="/BetterWebsite/Assets/chillies.png" alt="chillies">
+            <h3>Eating Spicy Foods</h3>
+            <p>Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis mauris. Curabitur wisi, quisque vel eu, rutrum nam.</p>
+          </div>
+        </div>
+        <hr>
+        <div class="contact-me">
+          <h2>Get In Touch</h2>
+          <h3>Lorem ipsum dolor sit amet, non elit.</h3>
+          <p>Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
+          <a class="btn" href="mailto:name@email.com">CONTACT ME</a>
+        </div>
+      </div>
+      
+      
+      <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/">Twitter</a>
+        <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+        <p>© 2021 Jonathan Phouminh.</p>
+      </div>
 
 </body>
 </body>
 
 </html>
+
+
+
+<!-- random exmample code 
+
+Using relative positioning, doesn't change the 
+layout of surrounding elements
+
+div {
+  width: 100px;
+  height: 100px;
+  display:inline-block;
+  position: relative;
+}
+
+
+.red {
+  background-color:red;
+  left:205px;
+}
+
+.blue {
+  background-color:blue;
+  right: 110px;
+}
+
+.yellow {
+  background-color: yellow;
+  right:110px
+}
+
+
+Using absolute positioning to move things, this 
+does change the layout of surrounding elements
+
+div {
+  width: 100px;
+  height: 100px;
+  display:inline-block;
+  position: absolute;
+}
+
+
+.red {
+  background-color:red;
+  top:200px;
+  left:200px;
+}
+
+.blue {
+  background-color:blue;
+  top:100px;
+  left:100px;
+}
+
+.yellow {
+  background-color: yellow;
+  top:0px;
+  left:0px;
+}
+
+
+Mixing relative and absolute property
+key here is remember that we are using inline-block
+
+.container {
+  position:relative;
+  width:300px;
+  height:300px;
+  background-color: grey;
+  display:inline-block
+} 
+
+.red {
+  width: 100px;
+  height: 100px;
+  display:inline-block;
+  position: absolute;
+  background-color:red;
+  bottom:25%;
+}
+
+.blue {
+  width: 100px;
+  height: 100px;
+  display:inline-block;
+  position: relative;
+  background-color:blue;
+  left:100px;
+}
+
+.yellow {
+  width: 100px;
+  height: 100px;
+  display:inline-block;
+  position: absolute;
+  background-color: yellow;
+}
+-->

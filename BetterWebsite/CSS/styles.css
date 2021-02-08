@@ -10,19 +10,38 @@
 body {
     background-color: azure;
     margin: 0px;
+    text-align: center; /* This centers all elements that DO NOT have a width element */
+    font-family: sans-serif; /* declaring verdana font, in sans-serif font*/
 }
 
 h1 {
 
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 562%;  /* 100 percent font size is equal to 16px, 16px == 1em*/
+    /*width: 10%; /* since we have specified a width we must specify the exact layout */
+    /*margin: 0 auto 0 auto; */
 }
+
+h2 {
+    font-size: 2.5rem; 
+}
+
 
 /***********CLASS SELECTORS**************/
 .upper-container {
     background-color: lightblue;
     margin: 0px;
-    
+    position: relative ;
+    padding-top: 100px;
 }
 
+.profilepic {
+    height: 200px;
+    border-radius: 50%;
+}
+
+/*
 .mid-container {
     background-color: red;
     height: 200px;
@@ -33,6 +52,23 @@ h1 {
     background-color: yellow;
     height: 200px;
     width: 200px;
+}
+*/
+
+.span {
+    color: blue;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left:300px;
+    bottom:300px;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
 }
 
 
