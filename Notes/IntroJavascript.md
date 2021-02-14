@@ -17,6 +17,10 @@ Arithmetic operations are the same as in any other language. Invalid arithmetic 
 		var colors = ["white", "blue", "green"];
 		var blue = colors[1]
 		var size = colors.length
+		
+		/* appending / removing to an array */ 
+		colors.push("purple")
+		colors.pop()
 ```
 
 
@@ -119,7 +123,7 @@ Arithmetic operations are the same as in any other language. Invalid arithmetic 
 *  **document.lastModified;** , this method returns the date of the last modified 
 	
 ### Global Javascript Objects
-	* Objects that javascript needs to create a model of such as objects that deal with date and time
+*  Objects that javascript needs to create a model of such as objects that deal with date and time, its like when you include premade packages / modules 
 
 
 ## Keywords
@@ -131,5 +135,46 @@ Arithmetic operations are the same as in any other language. Invalid arithmetic 
 ## Random Tips
 *	Always declare **script source** files at the bottom of the page
 *	Global variables reduce page performance, local variables are cleaned from memory after use 
+*	Math.random();  generates random number
 
 
+# Udemy WebDev Course Notes
+
+## Notes
+### Document Object Model
+* **Query Selectors**
+	* getElementById() , query by id
+	* QuerySelector() , lets you target an object via tag, classname, and id QuerySelectorAll(), lets you grab all targets that fit query
+
+* **.classlist.toggle("stylesheet class name")**
+	* use this command to toggle off and on the class style selectors in the css, should never be creating a new style inside of javascript file. Keep HTML for structure, CSS for styling, and Javascript for behavior			
+
+
+## Code Examples
+```json
+	/* While loops */
+	var i = 0; 
+	while (i < 10) {
+		console.log(i)
+		i++
+	}
+
+	/* for loops */ 
+	var j = 0
+	for (j = 0; j < 4; j++) {
+		console.log(j)
+	}
+```	
+
+
+* **Text Manipulation**
+	* **innerHTML** , this returns ALL the html inside of the tag you just queried 
+	* **textContent**, this gives you strictly the text part of the tag you query 
+
+```
+	var htmlCode = document.querySelector("h1").innerHTML; // <em> Hello World </em>
+	var textContent = document.querySelector("h1").textContent; // Hello World
+```
+
+**Attribute Manipulation** 
+	* 
