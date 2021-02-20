@@ -245,13 +245,64 @@ The **.on()** method is used to handle all event functions. JQuery also handles 
 
 **ex**
 ```json
-	$('li').on('click', function() {
+	$('li').on('click focus', function() {
 		/* adds a complete class to the element that selected it */
 		$(this).addClass('complete')
 	})
 ```
 
+You can also have parameteried event handling where we can
+1. Specify the subset of retrieved selectors
+2. pass data onto the handler 
 
+```json
+
+	/* general syntax */
+	.on(events[,selector],[,data],function(e)); 
+
+	/* concrete example */ 
+	$(function() {
+		var listItem, itemStatus, eventStatus; 
+		$('ul').on(
+			'click mouseover',
+			':not(#four)', 
+			{status:'important}, 
+			function(e) {	
+				listItem = 'Item: '+ e.target.textContent + '<br />'; 
+				itemStatus = 'Status: ' + e.data.status + '<br /';
+				eventType = 'Event: ' + e.type; 
+				$('#notes').html(listItem + itemStatus + eventType)
+			}
+
+	}); 
+
+```
+
+
+## Effects
+
+When you start using Jquery, the effects methods can help you website look more advanced. 
+
+**Basic Methods**
+- .show() 
+- hide()
+- .toggle()
+
+**Fading Effects**
+- .fadeIn()
+- .fadeOut()
+- .fadeTo()
+- .fadeToggle()
+
+**Sliding Effects**
+- .slideUp()
+- .slideDown()
+- .slideToggle()
+
+**Custom Effects**
+- .delay().   delays the execution of subsequent items in queue
+- .stop()     stops current animation
+- .animate()    creates custom animation. 
 
 
 
