@@ -1,3 +1,3 @@
+# ignore executables
 
-# node modules
-.node_modules/*
+# going to keep all the node packages, its to prevent dependency, at the very least you have the previous version. 

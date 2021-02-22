@@ -78,11 +78,47 @@ app.listen(3000, function() {
 ```
 
 
+**Get Requests**
+
+The first parameter in this function represents the action that we take when a client makes a **Get** request to this path in our server. 
+
+<em> Callback function</em>
+The first parameter, contains all the information from the client about the request. 
+The second parameter contains all the information that our server will send back 
+```json
+    /* This is how our server responds when someone comes to this path */
+    app.get("/", (req, res) => {
+        console.log(req)    // displaying all the information from the request browser
+        res.send("<h1> Hello World </h1>")          // sending back an html repsonse to the requestor. 
+    });
+```
+
+**Post Requests**
+```json
+    /* When we get data posted to this path, then this is how we respond */
+    app.post('/', (req, res) => {
+        res.send("Thanks for posting that!")
+    });
+```
+
+
+**Form Pages**
+
+**Method Attribute**: Determines what we are doing with the data. If we are "post" then we are sending the data to the "action atribute location"
+
+
+**Action Attribute**: This is where the method sends the reponse or request information. 
+
+
+**Form Data:** This is where our form data goes when we send it across to action path.
+* To tap into the form data, we install a npm package called body-parser. 
+
 
 
 **Problems you will see**
 ---
 **Cannot GET/**: When a browser throws this at you it means that it couldn't recieve anything back from the server. 
+**Cannot POST/**: This happens when the client is trying to post (send) back information to the server, but either the client has the wrong address to the server response or the server response hasn't handled a response coming from the client side directory.
 
 
 
