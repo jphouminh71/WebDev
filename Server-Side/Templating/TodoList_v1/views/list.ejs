@@ -1,0 +1,32 @@
+<%- include('header') -%> 
+
+    <div class="box" id="heading">
+        <h1> <%= listTitle %> </h1>
+    </div>
+
+    <div class="box">
+        <%  for (var i=0; i < newListItems.length; i++){ %>
+        <div class="item">
+            <input type="checkbox" class="">
+            <!-- Creating a li for each item -->
+            <!-- This automatically appends each new li to the html -->
+                    <p><%=newListItems[i]%></p>
+            </div>
+            <%  } %>
+            <form class="item" action="/" method="post">
+                <input type="text" name="newItem" placeholder="NewItem" autocomplete="off">
+
+                <!-- We add a name and a value so that we can tap into it in express
+                 to determine what page submitted this post request 
+                    
+                 IMPORTANT: If we set the value to a dynamic variable then it will only accept up 
+                 to the first whitespace. Ex. Pork Chop means that the value is Pork. If we
+                 we didn't set the dynamic value equal to a value then it would have recieved
+                 the whole string. Ex. Pork Chop will be represented as Pork Chop
+                -->
+                <button type="submit" name="list" value=<%= listTitle %> >+</button>
+            </form>
+        </div>
+        
+    </div>
+    <%- include('footer') -%> 
