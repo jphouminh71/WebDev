@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
     const query = req.body.cityName;
     const apiKey = "adb22825770aa3d71bdd2ec483fd5408";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}
-    &appid=${apiKey}&units=metric&state=colorado`
+    appid=${apiKey}&units=metric&state=colorado`
 
 
     /* Making the https request */
