@@ -3,15 +3,29 @@ require('dotenv').config();   // needs to be here so we can use it anywhere in t
 const url = `mongodb+srv://jonathan:phouminh@members.gkemk.mongodb.net/Members?retryWrites=true&w=majority`;
 
 const express = require('express');
+const session = require('express-session');
 const parser = require('body-parser');
 const mongoose = require('mongoose');
-const encrypt = require('mongoose-encryption')
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
+//const encrypt = require('mongoose-encryption')
 
 const app = express(); 
 app.use(express.static('public'));
 app.use(parser.urlencoded({extended: true})); // we use the encoded version to protect form data 
 app.set('view engine', 'ejs');
 
+
+/* Setting up the session configuration */
+app.use(session({
+    secret: process.env.SESSION_KEY,
+    resave: false,
+    saveUninitialized: false, 
+}));
+
+/* Using passport to deal with the session, look at the passport documentation under configuration*/
+app.use(passport.initialize());
+app.use(passport.session());
 
 /* Establish connection to the db */
 const connectionParams={
@@ -34,8 +48,8 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-userSchema.plugin(encrypt, {secret: process.env.SECRET_KEY, encryptedFields: ['password']}); // encrypting our password field
-
+//userSchema.plugin(encrypt, {secret: process.env.SECRET_KEY, encryptedFields: ['password']}); // encrypting our password field
+userSchema.plugin(passportLocalMongoose);
 /* Mongodbs encrpyiton will happen on all .save() methods and .find() fields */
 
 const User = new mongoose.model('User', userSchema);
@@ -59,43 +73,54 @@ app.get('/register', (req, res) => {
 
 
 app.post('/register', (req, res) => {
-    /* Grab the pass/email they passed in form  */
-    const newUser = User({
-        email: req.body.username,
-        password: req.body.password
-    });
-
-    newUser.save(function(err){
-        if (err){
-            console.log(err);
-        }
-        else {
-            res.render('secrets')
-        }
-    })
+    
 });
 
 
 app.post('/login', (req, res) => {
-    /* We need to check if this user belongs in our db */
-    const userName = req.body.username; 
-    const password = req.body.password; 
-
-    User.findOne({email:userName},function(err, foundUser){
-        if (err) {
-            console.log(err)
-        } else {
-            if (foundUser) {
-                if (foundUser.password == password) {
-                    res.render('secrets');
-                }
-                else {
-                    console.log("BAD INPUT");
-                }
-            }
-        }
-    }); 
+    
 });
+
+
+/* COMMENETING OUT TO REWRITE FOR COOKIES AND SESSIONS APPROACH */
+// app.post('/register', (req, res) => {
+//     /* Grab the pass/email they passed in form  */
+//     const newUser = User({
+//         email: req.body.username,
+//         password: req.body.password
+//     });
+
+//     newUser.save(function(err){
+//         if (err){
+//             console.log(err);
+//         }
+//         else {
+//             res.render('secrets')
+//         }
+//     })
+// });
+
+
+// app.post('/login', (req, res) => {
+//     /* We need to check if this user belongs in our db */
+//     const userName = req.body.username; 
+//     const password = req.body.password; 
+
+//     User.findOne({email:userName},function(err, foundUser){
+//         if (err) {
+//             console.log(err)
+//         } else {
+//             if (foundUser) {
+//                 if (foundUser.password == password) {
+//                     res.render('secrets');
+//                 }
+//                 else {
+//                     console.log("BAD INPUT");
+//                 }
+//             }
+//         }
+//     }); 
+// });
 
 app.listen(3000, () => {
     console.log(`Server started on port: 3000`);
