@@ -3,11 +3,26 @@
 
 import React from 'react'
 
-function Note() {
+
+function createNote(props) {
     return (
-        <h1> Note </h1> 
+        <Note
+            key = {props.key}
+            title = {props.title}
+            content = {props.content}
+        />
+    )
+}
+
+function Note(props) {
+    return (
+        <div className="note">
+            <h1>{props.title}</h1> 
+            <p>{props.content}</p>
+        </div> 
     )
 }
 
 
 export default Note; 
+export {createNote}; 

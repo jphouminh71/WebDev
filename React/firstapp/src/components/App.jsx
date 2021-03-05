@@ -1,13 +1,16 @@
 import React from 'react'
 import Header from './Header'
-import Note from './Note'
 import Footer from './Footer'
+import {createNote} from './Note'
+import Data from '../notes'
 
-// returns generated components 
 function App() {
+
     return (
         <div> 
             <Header /> 
+            {Data.map(createNote)}
+            <Footer /> 
         </div>
     ); 
 }

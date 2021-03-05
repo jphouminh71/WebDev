@@ -11,6 +11,8 @@ These notes are coming from Angela Yu's tutorial on Udemy
 * React, JSX, Props, Styling, Components, Babel, Virtual DOM, Containers, State Management, Hooks, Declarative Programming, and a lot ES6 operations!
 <br>
 
+* Whenever you find yourself re-using the same html code its probably a great opportunity to do make it into a component. 
+
 
 **Tools**
 * **Code Sandbox**: online React tool where you can build your components easily and also lets you import packages. 
