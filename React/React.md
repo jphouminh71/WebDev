@@ -1,6 +1,6 @@
 # React
 ---
-These notes are coming from Angela Yu's tutorial on Udemy
+These notes are coming from Angela Yu's tutorial on Udemy. Look at your examples from code sandbox for the good examples. 
 
 * React is a front end framework that focuses on building component based UI's. Makes structuring your front end code super easy. Previously we focused on keeping js,html,css away from each other, but react takes a different approach and encourages bring them together.
 * It enables websites to be incredibily interactive because you can make components update themselves and talk to the server independently. So instead of designing interaction for an entire page we just focus on the smaller components. 
@@ -28,5 +28,23 @@ These notes are coming from Angela Yu's tutorial on Udemy
 
 
 
-### JSX Imports and Exports 
-* Look at your examples on code sandbox, pretty straight forwards. 
+**JSX Imports and Exports** 
+* Look at your examples on code sandbox, pretty straight forwards.
+
+<br>
+
+**How do add functionality to our components?**
+* We have to understand states of components and we adjust behavior based on the 'state' of the component. 
+
+<br>
+
+**Declarative Programming**: This is when we structure our components based on their states. 
+
+**Imperative Programming**: This is when go and manually set attributes to our components. 
+
+**Hooks**: These are functions that allow us to hook into components to update their attributes. 
+
+
+**React.useState(param1,param2)**
+* First param is the intial state 
+* Second param is function that will be used to update the state
