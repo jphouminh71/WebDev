@@ -1,4 +1,10 @@
-# React
+# React Documentation Notes
+--- 
+
+
+
+<br><br><br>
+# React Tutorial
 ---
 These notes are coming from Angela Yu's tutorial on Udemy. Look at your examples from code sandbox for the good examples. 
 
