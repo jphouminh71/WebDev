@@ -1,5 +1,116 @@
 # React Documentation Notes
 --- 
+* You can inject any user input into React elements as it escapes any bad characters, so you don't need to worry about scripting attacks!
+* **React elements only update whats neccessary**, since elements are usually stateful, when React elements check for updates they will compare they old DOM tree to their new one. 
+
+* When you are creating componets, write the containers in the html that you will target with the render, then write the components that you will inject them into later. 
+* React component props are read-only properties
+
+
+<em> Two ways to define components </em>
+```js
+//- Function
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+//- Class
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+<em> React uses JSX to send props to child elements of defined components </em>
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+
+<em> Creating a reusable Component example </em>
+```js
+function Clock(props) {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {props.date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+
+function tick() {
+  ReactDOM.render(
+    <Clock date={new Date()} />,
+    document.getElementById('root')
+  );
+}
+
+setInterval(tick, 1000);
+```
+
+**Handling Events**
+```js
+import React from "react";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    //- define state variables
+    this.state = {
+      isToggled: true
+    };
+    this.handleToggle = this.handleToggle.bind(this);
+  }
+
+  // gets called when clicked
+  handleToggle(event) {
+    console.log(event.target.getAttribute("name")); // have to do it this way
+    this.setState((state, props) => ({
+      isToggled: !this.state.isToggled
+    }));
+  }
+
+  render() {
+    // conditional rendering
+    return (
+      <h1 name="label" onClick={this.handleToggle} value="thisvalue">
+        {" "}
+        {this.state.isToggled ? "ON" : "OFF"}{" "}
+      </h1>
+    );
+  }
+}
+
+export default App;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
