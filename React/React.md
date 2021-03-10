@@ -13,7 +13,7 @@
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
-
+`a
 //- Class
 class Welcome extends React.Component {
   render() {
@@ -92,26 +92,56 @@ class App extends React.Component {
 
 export default App;
 ```
-### React Forms
+**React Forms**
+* Need to figure out how to actually pass submit values to express, but this is how you set it up
+
+```js
+class FormOne extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: "coconut" };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert("Your favorite flavor is: " + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Pick your favorite flavor:
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="grapefruit">Grapefruit</option>
+            <option value="lime">Lime</option>
+            <option value="coconut">Coconut</option>
+            <option value="mango">Mango</option>
+          </select>
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+
+export default FormOne;
+```
+
+
+**Lifting State Up**
+* Its not uncommon for several components to need to reflect the same data, so you should put the same changing data for components to their most common ancestor then pass the changing values (keyboard input) into the state then passing the state as props to whichever component needs access to it. 
+
+* There should be only be a "single source of truth" for any data changes in a React applications so always rely on top down approach of sharing data as opposed to syncing data manually. 
+
 * 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -166,3 +196,10 @@ These notes are coming from Angela Yu's tutorial on Udemy. Look at your examples
 **React.useState(param1,param2)**
 * First param is the intial state 
 * Second param is function that will be used to update the state
+
+
+<br><br><br>
+
+# React Routing
+---
+1. First install ```npm i react-router-dom```. Then spin up the react project. 
