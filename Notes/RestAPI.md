@@ -156,4 +156,4 @@ app.route('/book')
         res.send('delete a book')
     })
 **How to Test API**
-* If you have a front end then it would be straightforwards to test the api, but if you don't then oyu 
+* If you have a front end then it would be straightforwards to test the api, but if you don't then you can use something like postman. 
