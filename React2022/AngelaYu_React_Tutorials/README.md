@@ -25,6 +25,12 @@ Inline styling is avaiable in React but its still recommeneded that you handle a
 
  <br><br>
 
+### Declarative vs Imperative Programming
+---
+
+
+ <br><br>
+
 
  ## React v18 Notes
  ---
