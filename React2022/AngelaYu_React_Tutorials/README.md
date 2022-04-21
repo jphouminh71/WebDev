@@ -28,6 +28,12 @@ Inline styling is avaiable in React but its still recommeneded that you handle a
 ### Declarative vs Imperative Programming
 ---
 
+<br><br>
+
+###  Class Components vs Hook Components
+---
+Hooks components are much cleaner than Functional components, mainly because we can get rid of most of the boiler plate code 
+
 
  <br><br>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+  import KeeperApp3 from './Components/KeeperApp3/KeeperApp3';
 // import KeeperApp from './Components/KeeperApp/KeeperApp';
 // import PropsDemo from './Components/PropsDemo/PropsDemo';
 // import PropsChallenge from './Components/PropsChallenge/PropsChallenge';
@@ -10,11 +11,14 @@ import ReactDOM from 'react-dom/client';
 // import DeclarativeProgramming from './Components/DeclarativeProgramming/DeclarativeProgramming';
 // import HooksApp from './Components/Hooks/HooksApp';
 // import HooksChallenge from './Components/HooksChallenge/HooksChallenge';
-import EventHandingApp from './Components/EventHandling/EventHandlingApp';
+// import EventHandingApp from './Components/EventHandling/EventHandlingApp';
+// import EventFormApp from './Components/EventForm (complex state 1)/EventFormApp';
+// import ComplexStateChallenge from './Components/ComplexStateChallenge/ComplexStateChallenge';
+// import SpreadOpChallenge from './Components/SpreadOpChallenge/SpreadOpChallange';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <EventHandingApp />
+    <KeeperApp3 />
   </React.StrictMode>
 );
