@@ -947,3 +947,75 @@ When you call <mark> setTimeout() </mark> the JavaScript engine creates a new fu
 
 Then it is only executed when the call stack is empty and is pulled from the callback queue
 
+<br><br>
+
+### examples 
+
+```js
+function task() {
+  let n = 100; 
+  while (n > 100) {
+    n--; 
+  }
+  console.log("task returned");
+}
+
+// repeats the task, loads them onto the call stack 
+function repeatTask(task) {
+  let seconds = 2; 
+  setInterval(() => task(), seconds*1000);
+}
+
+// backburners the passed task off the immediate callstack
+function timeoutTask(task) {
+  setTimeout(() => task(), 0);
+}
+
+
+/*
+1650469086654
+starting program
+task returned
+ending program
+STOPEED
+*/
+function blockingExecution() {
+  console.log(new Date().getTime());
+  console.log("starting program");
+  task(); 
+  console.log("ending program");
+}
+blockingExecution()
+console.log("STOPEED");
+
+/* 
+1650468969101
+starting program
+ending program
+task returned   , this gets executed when the "UI thread" is free. 
+*/
+function nonBlockingExecution() {
+  console.log(new Date().getTime());
+  console.log("starting program");
+  timeoutTask(task); 
+  console.log("ending program");
+} 
+
+/*
+1650469018580
+starting program
+ending program
+task returned  // these all get pushed to the stack and get executed only when the UI thread is free 
+task returned
+task returned
+task returned
+task returned
+*/
+
+function repeatingExeuction() {
+  console.log(new Date().getTime());
+  console.log("starting program");
+  repeatTask(task); 
+  console.log("ending program");
+} 
+```
