@@ -136,6 +136,26 @@
         border-radius: 30px;
     }
 
+    .greenButton {
+        background-color: green;
+        color:white;
+        border-width: 0px;
+        height: 30px;
+        width: 80px;
+        transition: height 0.5s, width 0.5s;
+    }
+
+    .stretchable-button:hover {
+        height: 40px;
+        width: 90px;
+        transition: box-shaodow 0.5s;
+    }
+
+    .three-dimention:active {
+        margin: 0 0 50 0;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.40);    /* horizontal pos, vertical pos, blur amount */
+    }
+
     button {
         cursor: pointer;
         vertical-align: top;
@@ -177,3 +197,11 @@ Apply on company website
 <button class="linkedin-save"> 
 Save 
 </button>
+
+<button class="greenButton stretchable-button"> 
+Stretch 
+</button>
+
+<button class="greenButton three-dimention">
+    3D-Clicks
+</button> 

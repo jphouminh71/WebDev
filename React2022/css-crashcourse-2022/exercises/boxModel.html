@@ -1,0 +1,83 @@
+<style> 
+    button {
+        vertical-align: top;
+    }
+
+    .subscribe-button {
+        background-color: rgb(201, 3, 3);
+        color: white;
+        border: none;
+        padding: 10px 16px 10px 16px; /* top right bottom left  */ 
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 0px 8px 0px 0px; /* top, right, bottom, left */
+        transition:   opacity 0.1s;  /* making our transition to different effects smoother, what we want to transition and how long */
+        vertical-align: top; /* aligns everything to the top of the item rather than align with all other text elements on the screen */
+    }
+
+    /* style only applies when we hover hover an element that implements the subscribe-button */
+    .subscribe-button:hover {
+        opacity: 0.7;
+    }  
+
+    /*  while its actively being clicked */
+    .subscribe-button:active {
+        opacity: 0.5;
+    }
+    .join-button {
+        background-color: white; /* text background color*/
+        color: blue;
+        border-color: blue;
+        border-style: solid;
+        border-width: 1px;
+        padding: 9px 16px 9px 16px; /* top right bottom left  */  /*FAVOR THIS OVER HEIGHT AND WIDTH */
+        border-radius: 2px;
+        margin: 0px 8px 0px 8px;
+        cursor: pointer;
+        transition: background-color  0.1s, color 0.1s;
+    }
+
+    .join-button:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .join-button:active {
+        opacity: 0.7;
+    }
+
+    .tweet-button {
+        background-color: rgb(94, 164, 230);
+        color: white;
+        font-size: 15px;
+        font-weight: bold;;
+        border: none; 
+        padding: 10px 25px 10px 25px; /* top right bottom left */
+        margin: 0px 0px 0px 8px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-left: 8px;
+        vertical-align: top;
+    }
+
+    .tweet-button:hover {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.40);    /* horizontal pos, vertical pos, blur amount */
+    }
+
+    .expand-width:hover {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+</style>
+
+    <button class="subscribe-button expand-width"> 
+        Subscribe
+    </button>
+    
+    <button class="join-button expand-width">
+        JOIN my Channel
+    </button>
+    
+    <button class="tweet-button expand-width">
+        Tweet
+    </button>
