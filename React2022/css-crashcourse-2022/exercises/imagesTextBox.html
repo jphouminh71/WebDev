@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title> Images / TextBox Exercises </title>
+        <style> 
+            .rounded-corners {
+                width: 200px; 
+                border-radius: 20px;
+            }
+
+            .centered-fixed-dimensions {
+                width: 200px; 
+                height: 200px; 
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .roundedImage {
+                object-fit: cover;
+                object-position: center;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+            }
+
+            .input-boxes {
+                display: block;
+            }
+            .chat-support-text {
+                display: inline-block;
+                width: 300px;
+                vertical-align: middle;
+            }
+            .chat-support-buttons {
+                display: inline-block;
+            }
+
+
+            /* Google styling */
+            .google-icon {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                height: 50px;
+                margin-bottom: 11px;
+            }
+
+            .google-search-bar
+            {
+                font-family: Arial;
+                font-size: 12px;
+
+                border-width: 0.1px;
+                border-color: lightgray;
+                border-radius: 20px;
+                
+                height: 20px;
+                padding-left: 10px;
+
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 55%;
+            }
+            .google-search-bar:focus {
+                outline: none;
+            }
+
+            /* Uber items styling */
+            .uber-heading {
+                font-family: Arial;
+                font-weight: 500;
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            .uber-text-input {
+                padding-top: 10px;
+                padding-left: 12px; 
+                padding-bottom: 10px;
+                font-size: 10px;
+                width: 240px;
+                border-width: 0px;
+                display: block;
+                background-color: 	rgb(236, 236, 236);
+            }
+            .uber-text-input:focus{
+                outline: none;
+            }
+
+            .pickup-location {
+                margin-bottom: 4px;
+            }
+
+            .uber-button {
+                margin-top: 10px;
+                display: inline-block;
+                font-family: Arial;
+                border-width: 0px;
+                font-size: 12px;
+                padding: 10px 14px 10px 14px; 
+            }
+            .request-button {
+                color: white;
+                background-color: black;
+                margin-right: 7px;
+            }
+            .schedule-button {
+                color: black;
+                background-color: rgb(236, 236, 236);;
+            }
+            </style> 
+        </head>
+        <body> 
+            <p class="uber-heading"> 
+                Request a ride now
+                </p>
+                <input 
+                    class="uber-text-input pickup-location"
+                    placeholder="Enter pickup location"/> 
+                <input
+                    class="uber-text-input" 
+                    placeholder="Enter destination"/> 
+                <button class="uber-button request-button"> Request Now </button>
+                <button class="uber-button schedule-button"> Schedule for later </button>
+            <hr/> 
+            <img 
+                class="google-icon"
+                alt="google.com"
+                src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/> 
+            
+            <Input 
+                class="google-search-bar"
+                placeholder="Search Google or type a URL" 
+                type="text"/>
+
+            <hr/> 
+            <p class="chat-support-text"> 
+                Thanks for chatting with our customer support. Would you like 
+                to take our quick survey? 
+                </p>
+                <button class="chat-support-buttons"> Yes </button>
+                <button class="chat-support-buttons" > No </button>
+            <hr/> 
+            <p>
+                Stacking 2 Text boxes 
+            </p>
+                <input class="input-boxes" placeholder="Name"  type="textbox"/>
+                <input class="input-boxes" placeholder="Email"  type="textbox"/> 
+            <hr/> 
+            <p> 
+                    200px with rounded corners
+                </p>
+            <img class="rounded-corners" src="https://www.denofgeek.com/wp-content/uploads/2022/03/Naruto-Sasuke-Fight.jpeg?resize=768%2C432"/>
+            <hr/> 
+            <p> 
+                    Square image with image centered 
+            </p>
+            <img class="centered-fixed-dimensions" src="https://www.denofgeek.com/wp-content/uploads/2022/03/Naruto-Sasuke-Fight.jpeg?resize=768%2C432"/>
+            <hr/> 
+            <p> 
+                    Circular Image
+                </p>
+            <img class="roundedImage" src="https://www.denofgeek.com/wp-content/uploads/2022/03/Naruto-Sasuke-Fight.jpeg?resize=768%2C432"/> 
+            </body>
+</html>
