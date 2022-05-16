@@ -2,37 +2,58 @@
 <html> 
 <head> 
     <title> Youtube </title>
-    <style> 
-        .thumbnail-image {
-            display: block;
-            width: 300px;
-        }
-        .search-bar {
-            font-size: 20px;
-            margin-left: 12px;
-        }
-        .video-title {
-            width: 300px; 
-        }
-        .video-author, 
-        .video-stats {
-            display: inline-block;
-        }
-    </style> 
+    <link rel="stylesheet" href="./styles.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body> 
-    <input class="search-bar" placeholder="Search" type="textbox"/> 
-    <img class="thumbnail-image" src="Assets/marq.webp"/>
-    <p class="video-title"> 
-            Talking Tech and AI with Google CEO Sundar 
-            Pichai!
-        </p>
-    <p class="video-author"> 
-            Marques Brownlee
-        </p>
-    <p class="video-stats"> 
-        3.4M views &#183 6 months ago
-    </p>
+    <input class="search-bar" placeholder="Search" type="textbox"/>
+    <hr/> 
+    <div class="video-preview"> 
+        <div class="thumbnail-row">
+            <img class="thumbnail-image" src="Assets/marq.webp"/>    
+        </div>
+        <div>
+            <div class="channel-picture">
+                <img class="profile-picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-1.jpeg" /> 
+            </div>
+             <div  class="video-info"> 
+                <p class="video-title"> 
+                    Talking Tech and AI with Google CEO Sundar 
+                    Pichai!
+                </p>
+                <p class="video-author"> 
+                        Marques Brownlee
+                    </p>
+                <p class="video-stats"> 
+                    3.4M views &#183 6 months ago
+                </p>    
+            </div>
+        </div>        
+    </div>  
+
+    <div class="video-preview"> 
+        <div class="thumbnail-row">
+            <img class="thumbnail-image" src="Assets/dontlaugh.webp"/>    
+        </div>
+        <div>
+            <div class="channel-picture">
+                <img class="profile-picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-1.jpeg" /> 
+            </div>
+             <div  class="video-info"> 
+                <p class="video-title"> 
+                    Try Not To Laugh Challenge
+                </p>
+                <p class="video-author"> 
+                        Markiplier
+                    </p>
+                <p class="video-stats"> 
+                    19M views &#183 4 years ago
+                </p>    
+            </div>
+        </div>        
+    </div>  
 </body>
 </html>
 
@@ -42,7 +63,7 @@ CSS Display Property
 In html there are 3 types of elements 
 
 1. Block element 
-    - Elements will take up the entire line of the screen 
+    - Elements will take up the entire width inside of their respective container
 
 2. Inline-block Element 
     - Elements will only take up as much space as they need to in the same line, other blocks will try to fit in it 
@@ -52,4 +73,9 @@ In html there are 3 types of elements
     - They appear with text. 
 
 
+
+<DIV> elements 
+    Divs are just boxes , they don't show up on the screen, use them as like a parent wrapper to all of its child elements
+    - Divs are block elements by default. 
+    - Divs are meant to act like containers on the screen. They help us group elements together
 -->

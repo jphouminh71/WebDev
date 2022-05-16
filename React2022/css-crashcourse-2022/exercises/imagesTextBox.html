@@ -36,37 +36,6 @@
             }
 
 
-            /* Google styling */
-            .google-icon {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                display: block;
-                height: 50px;
-                margin-bottom: 11px;
-            }
-
-            .google-search-bar
-            {
-                font-family: Arial;
-                font-size: 12px;
-
-                border-width: 0.1px;
-                border-color: lightgray;
-                border-radius: 20px;
-                
-                height: 20px;
-                padding-left: 10px;
-
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 55%;
-            }
-            .google-search-bar:focus {
-                outline: none;
-            }
-
             /* Uber items styling */
             .uber-heading {
                 font-family: Arial;
@@ -108,11 +77,92 @@
             }
             .schedule-button {
                 color: black;
-                background-color: rgb(236, 236, 236);;
+                background-color: rgb(236, 236, 236);
+            }
+
+            /* Sign up form */
+            input:focus {
+                outline: none;
+            }
+
+            .name-input {
+                border-style: solid;
+                border-color: rgb(236, 236, 236);
+                border-width: 1.5px;
+                border-radius: 5px;
+                display: inline-block;
+                width: 100px; ;
+                padding: 5px 10px 5px 10px;
+                margin-bottom: 5px;
+            }
+
+            .email-input {
+                border-style: solid;
+                padding: 5px 10px 5px 10px;
+                border-color: rgb(236, 236, 236);
+                border-width: 1.5px;
+                border-radius: 5px;
+                display: block;
+                width: 228px;
+                margin-bottom: 7px;
+            }
+
+            .signup-btn {
+                color: white;
+                font-weight: bold;
+                background-color: blue;
+                padding: 10px 98px 10px 98px;
+                border-radius: 5px;
+                border-width: 1px;
+            }
+
+
+            /* Google styling */
+            .google-container {
+                text-align:  center;
+            }
+            .google-icon {
+                height: 50px;
+                margin-bottom: 11px;
+                display: block;
+                margin:auto;
+            }
+            .google-search-bar
+            {
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display: block;
+                font-family: Arial;
+                font-size: 12px;
+                border-width: 0.1px;
+                border-color: lightgray;
+                border-radius: 20px;
+                height: 20px;
+                width: 55%;
+                
+            }
+            .google-search-bar:focus {
+                outline: none;
+            }
+            .google-button {
+                font-size: 10px;
+                border-width: 0px;
+                margin-top: 5px;
+                padding: 10px 20px 10px 20px; 
+                color: black; 
+                font-family: Arial;
             }
             </style> 
         </head>
         <body> 
+
+            <input class="name-input" placeholder="First name" type="text"/> 
+            <input class="name-input" placeholder="Last name" type="text"/> 
+            <input class="email-input" placeholder="Email" type="text"/> 
+            <button class="signup-btn"> Sign up </button>
+
+            <hr/> 
             <p class="uber-heading"> 
                 Request a ride now
                 </p>
@@ -125,16 +175,19 @@
                 <button class="uber-button request-button"> Request Now </button>
                 <button class="uber-button schedule-button"> Schedule for later </button>
             <hr/> 
-            <img 
-                class="google-icon"
-                alt="google.com"
-                src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/> 
-            
-            <Input 
-                class="google-search-bar"
-                placeholder="Search Google or type a URL" 
-                type="text"/>
 
+            <div class="google-container"> 
+                <img 
+                    class="google-icon"
+                    alt="google.com"
+                    src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/> 
+                <Input 
+                    class="google-search-bar"
+                    placeholder="Search Google or type a URL" 
+                    type="text"/>
+                <button class="google-button">  Google Search </button>
+                <button class="google-button"> Im Feeling Lucky </button>
+             </div>
             <hr/> 
             <p class="chat-support-text"> 
                 Thanks for chatting with our customer support. Would you like 

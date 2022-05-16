@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Div Practice Sheets </title>
+    <style>
+        .red-square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-width: 0px;
+        }
+
+        .green-circle {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 100%;
+        }
+
+        .survey-container {
+            border-color: grey;
+            border-style: solid;
+            border-width: 1.5px;
+            height: 50px;
+            width: 350px;
+            padding: 20px 10px 30px 10px;
+            /* top right bottom left*/
+        }
+
+        s .surver-question {
+            font-size: 14px;
+            font-family: Arial;
+            display: block;
+        }
+
+        .install-container {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-family: Arial;
+            background-color: black;
+            color: white;
+            width: 250px;
+        }
+
+        .install-text {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 10px;
+            height: 50%;
+        }
+
+        .install-main-text {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .install-description {
+            color: grey;
+            vertical-align: text-top;
+        }
+
+        /* Tweet styling */
+        .tweet-container {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 50px;
+            width: 300px;
+            border-style: solid;
+            border-color: lightgray;
+            border-width: 1px;
+            border-radius: 3px;
+        }
+        
+        .tweet-image {
+            display: inline-block;
+            object-fit: cover;
+            object-position: left;
+            margin-top: 8px;
+            margin-left: 10px;
+            width: 35px;
+            height: 35px;
+            background-color: green;
+            border-radius: 100%;
+        }
+
+        .tweet-text-input {
+            display: inline-block;
+            width: 150px;
+            vertical-align: top;
+            border-width: 0px;
+            height: 20px;
+            margin-top: 15px;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+        .tweet-text-input:focus {
+            outline: none;
+        }
+
+        .tweet-button {
+            font-size: 10px;
+            height: 20px;
+            width: 50px;
+            background-color: rgb(94, 164, 230);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 15px;
+            margin-top: 15px;
+            vertical-align: top;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <p> Red Square Div </p>
+    <div class="red-square"> </div>
+    <hr />
+    <p> Green Circle Div </p>
+    <div class="green-circle"> </div>
+    <hr />
+    <div class="survey-container">
+        <p class="surver-question"> Satisfied with our service? </p>
+        <button> Yes </button>
+        <button> No </button>
+    </div>
+    <hr />
+
+    <div class="install-container">
+        <p class="install-text install-main-text"> Install YouTube Music </p>
+        <p class="install-text  install-description"> Add YouTube Music to your desktop for quick and easy access </p>
+    </div>
+    <hr />
+
+    <div class="tweet-container"> 
+        <img 
+            class="tweet-image"
+            alt="naruto" 
+            src="../youtube-remake//Assets/marq.webp" /> 
+        <input class="tweet-text-input" placeholder="What's happening?" />   
+        <button class="tweet-button"> Tweet </button>
+    </div>
+
+    <hr/> 
+
+</body>
+
+</html>
