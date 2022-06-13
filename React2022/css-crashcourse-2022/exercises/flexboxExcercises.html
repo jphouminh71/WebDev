@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Flexbox Exercises </title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            div::-webkit-scrollbar { /* Hides scrollbar */
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p> Create a flexbox witth 2 items. Widths = 200px | 75px </p>
+        <div style="display: flex">
+            <div style="background-color: lightblue; width: 200px;"> 200px
+            </div>
+            <div style="background-color: lightpink; width: 75px;"> 75px </div>
+        </div>
+        <hr/>
+
+            <p> A Flexbox with 3 items. widths 50px | remaining space | 75px
+            </p>
+            <div style="display: flex">
+                <div style="background-color: lightblue; width: 50px;"> 50px
+                </div>
+                <div style="background-color: lightpink; flex: 1"> flex: 1
+                </div>
+                <div style="background-color:lightblue; width: 75px;"> 75px
+                </div>
+            </div>
+            <hr/>
+
+                <p> A flexbox with 4 items spaced out evenly </p>
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="background-color: lightblue"> Item 1 </div>
+                    <div style="background-color: lightpink"> Item 2 </div>
+                    <div style="background-color: lightblue"> Item 3 </div>
+                    <div style="background-color: lightpink"> Item 4 </div>
+                </div>
+                <hr />
+
+                <p> A sized flexbox with grey borders with two items on outside
+                </p>
+                <div style="border-style: solid;
+                    border-width: 2px;
+                    border-color: grey;
+
+                    height: 50px;
+                    display: flex;
+                    align-items: center; /* default value is stretch */
+                    justify-content: space-between;">
+                    <div style="background-color: lightpink ;"> Item 1 </div>
+                    <div style="background-color: lightpink;"> Item 2 </div>
+                </div>
+                <hr />
+
+                <p> Notification Tray </p>
+
+                <!-- Main Container Flexbox -->
+                <div style="
+                    border-radius: 10px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color: grey;;
+                    display: grid;
+                    height: 100px;
+                    overflow: hidden;
+                    overflow: auto;
+                    ">
+
+                    <!-- Tray Item -->
+                    <div style="display: flex;
+                        justify-content: space-between;
+                        align-items: center;">
+                        <p style="font-weight: bold; margin-left: 15px;"> Home
+                        </p>
+                        <div style="background-color: blue;
+                            padding: 4px 12px 4px 12px;
+                            text-align: center;
+                            margin-right: 15px;
+                            border-radius: 10px;
+                            font-weight: bold;
+                            color: white">
+                            14
+                        </div>
+                    </div>
+                    <!-- Tray Item -->
+                    <div style="display: flex;
+                        justify-content: space-between;
+                        align-items: center;">
+                        <p style="font-weight: bold; margin-left: 15px;"> Notifications
+                        </p>
+                        <div style="background-color: blue;
+                            padding: 4px 12px 4px 12px;
+                            text-align: center;
+                            margin-right: 15px;
+                            border-radius: 10px;
+                            font-weight: bold;
+                            color: white">
+                            7
+                        </div>
+                    </div>
+                    <!-- Tray Item -->
+                    <div style="display: flex;
+                        justify-content: space-between;
+                        align-items: center;">
+                        <p style="font-weight: bold; margin-left: 15px;"> Messages
+                        </p>
+                        <div style="background-color: blue;
+                            padding: 4px 12px 4px 12px;
+                            text-align: center;
+                            margin-right: 15px;
+                            border-radius: 10px;
+                            font-weight: bold;
+                            color: white">
+                            5
+                        </div>
+                    </div>
+                    <!-- Tray Item -->
+                    <div style="display: flex;
+                        justify-content: space-between;
+                        align-items: center;">
+                        <p style="font-weight: bold; margin-left: 15px;"> Friend Requests
+                        </p>
+                        <div style="background-color: blue;
+                            padding: 4px 12px 4px 12px;
+                            text-align: center;
+                            margin-right: 15px;
+                            border-radius: 10px;
+                            font-weight: bold;
+                            color: white">
+                            5
+                        </div>
+                    </div>
+                </div>
+                <hr /> 
+
+                <!-- Searchbar Container -->
+                <div style="
+                    background-color: #9d59b8;
+                    display: flex;
+                    flex-direction: row;
+                    height: 60px;
+                    width: 100%;
+                    "> 
+                    
+                    <!-- Home Icon -->
+                    <div style="
+                        display: flex;
+                        align-items: center;    /* center it vertically */
+                        justify-content: left;  /* align items to left of this container */
+                        width: 10%">
+                            <p style="
+                                margin-left: 20px;
+                                color: white; 
+                                font-family: arial;
+                                font-size: 1.2rem;
+                                font-weight: 700;
+                            ">
+                                 Home
+                             </p>
+                    </div>
+
+                    <!-- Input Bar -->
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                        margin-left: 30px;
+                        margin-right: 30px;
+                        background-color: #9d59b8;
+                        flex: 1">
+                         <input 
+                            style="
+                                border-width: 0px;
+                                border-radius: 30px;
+                                height: 50%;
+                                flex: 1"
+                            placeholder="Search"/>
+                    </div>
+
+                    <!-- Download Button -->
+                    <div style="
+                        display: flex;
+                        justify-content: right;
+                        align-items: center;
+                         width: 30%;">
+                        <button style="        
+                            color: white;
+                            border-style: solid;
+                            border-color: white;    
+                            border-radius: 5px;
+                            background-color: #9d59b8;
+                            width: 50%; 
+                            height: 80%;
+                            margin-right: 15px;
+                        ">
+                             <span style="font-size: 1.2rem"> Download </span>
+                         </button>
+                     </div>
+                </div>
+
+
+            </body>
+        </html>

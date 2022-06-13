@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Aboslute / Relative Positioning </title>
+    </head>
+    <body style="height: 3000px;
+        padding-left: 80px;
+        padding-top: 60px;">
+
+        <!-- Black header -->
+        <div style="background-color: black;
+            color: white;
+            position:fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;">
+                <span> header </span>
+        </div>
+        
+        <!-- Green sidebar -->
+        <div style="position: fixed;
+            bottom: 0;
+            left: 0;
+            top:50px;
+            width: 72px;
+            background-color: green;
+            color: white;">
+
+        <!-- Sidebar X Button   -->
+            <div style="right: 0px;
+                top: 0px;
+                position:absolute;
+                background-color: red;
+                color: white">
+                X </div>
+            Sidebar </div>
+
+
+        <!-- Light blue container -->
+        <div style="
+            background-color: lightblue; 
+            width: 200px; 
+            height: 200px;">
+            div 1 
+        </div>
+
+        <!-- Pink container -->
+        <div style="
+            position: relative;   
+            background-color: lightpink; 
+            width: 200px; 
+            height: 200px;">
+                <p> div 2 </p> 
+                <div style="
+                right: 10px;
+                bottom: 10px;
+                position:absolute;
+                background-color: black;
+                color: white">
+                    <span> 5:00 </span> 
+                </div>
+        </div>
+    </body>
+</html>
+
+<!--
+    position: static - default positioning 
+    position: fixed - elements are fixed based on the current BROWSER WINDOW 
+    position: abosolute -  elements are fixed into the FULL PAGE, good for sticking elements within eachother like youtube timestamps 
+    position: relative -  elements are positioned / fixed RELATIVE to the nearest Position:Relative parent element, Use poisition relative to help you do more 
+        complicated positioning of its child elements 
+
+    special properties for positioing 
+        top: how many pixels away from the browser window
+        left: how far away the element is away from the browser window 
+        right: how far away the element is away from the right of the browser window 
+
+        you can do things like this to make items stretch since it will obey both  
+            right: 40px; 
+            left: 40px; 
+
+    Position Absolute takes the same properties as positioned fixed
+
+-->

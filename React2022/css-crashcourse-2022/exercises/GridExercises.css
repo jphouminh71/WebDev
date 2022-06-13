@@ -1,0 +1,76 @@
+/* Basic grid style properties */
+.two-column-grid {
+    display: grid; 
+    grid-template-columns: 200px 75px; 
+}
+.three-column-grid {
+    display: grid; 
+    grid-template-columns: 50px 1fr 75px;
+}
+.four-column-two-row-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+
+/* Styles for designing friend card with grids */
+.friend-container {
+    background-color: pink;
+    display: grid; 
+    height: 190px;
+    width: 500px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.card-container {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100%; 
+    width: 80%;
+    background-color: white;
+    border-width: 10px;
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.card-image {
+    display: block;
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+p, button {
+    font-size: 10px;
+    font-family: Arial;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+.card-name {
+    max-height: 10px;
+    overflow: hidden;
+    font-weight: bold;
+    margin-top: 5px;
+   word-wrap: break-word;
+}
+
+.card-mutual-friends {
+    font-size: 8px;
+    color: grey;
+    margin-top: 2px;
+}
+
+.card-add-button {
+    color: white; 
+    background-color: rgb(66, 103, 178);
+    border-width: 0px;
+    margin-top: 7px;
+    padding: 5px 9px 5px 9px;
+    border-radius: 5px;
+}

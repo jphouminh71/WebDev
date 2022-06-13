@@ -1,40 +1,105 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title> Grid CSS Practice </title>
+    </head>
 
-<head>
-    <title> Grid CSS Practice </title>
-</head>
-
-<body>
-    <div style="
-            display: grid;
+    <body>
+        <!-- First Grid -->
+        <div
+            style="display: grid;
             grid-template-columns: 100px 100px;">
-        <div style="
-            background-color: lightblue;">
-            Div 1 </div>
-        <div style="
-            background-color: lightpink;">
-            Div 2 <p> Text </p>
-        </div>
-    </div>
+            <div style="background-color: red;">
+                <span> Div 1 </span>
+            </div>
 
-    <div style="
-            margin-top: 30px;
+            <div style="background-color: blue;">
+                <span> Div2 </span>
+                <p> Text </p>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div
+            style="margin-top: 30px;
             display: grid;
             grid-template-columns: 100px 100px 200px;">
-        <div style="
-            background-color: lightblue;">
-            Div 1 </div>
-        <div style="
-            background-color: lightpink;">
-            Div 2 <p> Text </p>
-        </div>
-        <div style="
-            background-color: lightpink;">
-            Div 2 <p> Text </p>
-        </div>
-    </div>
+            <div style="background-color: cyan;">
+                <span> 100px </span>
+            </div>
 
-</body>
+            <div style="background-color: lightcoral;">
+                <span> 100px </span>
+                <p> Text </p>
+            </div>
 
+            <div style="background-color: pink;">
+                <span> 200px </span>
+                <p> Text </p>
+            </div>
+        </div>
+        <!-- Third Grid -->
+        <div
+            style="margin-top: 30px;
+            display: grid;
+            grid-template-columns: 100px 1fr;">
+            <div style="background-color: cyan;">
+                <span> 100px </span>
+            </div>
+
+            <div style="background-color: lightcoral;">
+                <span> 1fr </span>
+            </div>
+        </div>
+
+        <!-- Fourth  Grid (2Frs) this is like WPF Grid-Column-Width=* -->
+        <div
+            style="margin-top: 30px;
+            display: grid;
+            grid-template-columns: 100px 2fr 1fr;">
+            <div style="background-color: cyan;">
+                <span> 100px </span>
+            </div>
+
+            <div style="background-color: lightcoral;">
+                <span> 1fr </span>
+            </div>
+
+            <div style="background-color: lightgreen;">
+                <span> 1fr </span>
+            </div>
+        </div>
+
+        <!-- Fifth  Grid -->
+        <div
+            style="
+            padding-bottom: 1000px;
+            margin-top: 30px;
+            display: grid;
+            column-gap: 20px;
+            row-gap: 40px;
+            grid-template-columns: 1fr 1fr 1fr;">   <!-- 3 columns in this grid each spaced evently wide --> 
+            <div style="background-color: cyan; height: 200px;">
+                <span> 1fr </span>
+            </div>
+
+            <div style="background-color: lightcoral; height: 200px;">
+                <span> 1fr </span>
+            </div>
+
+            <div style="background-color: cyan; height: 200px;">
+                <span> 1fr </span>
+            </div>
+
+            <div style="background-color: lightcoral; height: 200px;">
+                <span> 1fr </span>
+            </div>
+            <div style="background-color: cyan; height: 200px;">
+                <span> 1fr </span>
+            </div>
+            <div style="background-color: lightcoral; height: 200px;">
+                <span> 1fr </span>
+            </div>
+        </div>
+    </body>
 </html>
