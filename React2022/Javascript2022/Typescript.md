@@ -135,10 +135,116 @@ greeting = function(name: string)
     return "Hello ${name}"; 
 } 
 ```
+<br><br><br>
 
+### Type Inference
+--- 
 
+Type inference describes where and how TypeScript inferes types when you don't explicity `annotate` them (although you should or else why use typescript). 
 
+ex. 
+```ts
+let x = 10;  // same as let x: number = 10 
 
+// these are the same 
+function(max=100){
+    return max 
+}
+
+function(max: number = 100) : number {
+    return max; 
+}
+```
+
+So wehen should you use type inference vs type annotations? 
+  
+- In practice, you should always use the type inference as much as possilbe. And use type annotation in the following cases
+    - When you declara vairable that you will assign later 
+    - When you want a variable that can't be inferred 
+    - When a function returns the `any` type and you want to clarify the value. 
+
+eh, honestly I would love to just markup everything, makes it 100x easier to read and follow. 
+<br><br><br>
+
+### `number`: Type 
+---
+
+**IMPORTANT**: There is a huge difference between Number and number. One is primitive type and one is a boxed TS Object! Lower case for primitive types. 
+
+```ts
+let p : number; 
+let p : number = 99.5; 
+
+// multiple inline declarations
+let x: number = 10, y: number = 12;
+
+let binary: number = 0b0111
+let octal: number = 0o0101
+let hexDecimal: number = 0XFF
+
+let bigInt: bigint = 12903884011n; 
+```
+<br>
+
+### `string`: Type
+--- 
+
+```ts
+let firstName = 'Jon'; 
+let fullName = "Jonathan Phouminh" 
+
+let lastName = "Phouminh"; 
+let fullNameInteropulated = `Jonathan ${lastName}`;
+```
+<br>
+
+### `boolean`: Type
+--- 
+
+```ts
+let isValid: boolean; 
+isValid = false; 
+isValid = true; 
+```
+<br>
+
+### `object`: Type
+---
+```ts
+let employee: {
+    firstName: string;
+    lastName: string;
+    age: number;
+    jobTitle: string;
+} = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    jobTitle: 'Web Developer'
+};
+```
+
+### `array`: [Type]
+--- 
+
+```ts
+let myNumbers: number[] = [1,2,3,4,5]; 
+let alphabet: string[] = ['a','b','c','d','e'];
+let two : number = myNumbers[1];
+
+myNumbers.push(6); 
+myNumbers.pop(); 
+
+let myNumbers_length: number = myNumbers.length; 
+let doubleNumbers: number[] = myNumbers.map(num => num * 2); 
+// filter  and reduce are also available 
+
+// you can also have mixed arrays, not sure when this is value other then maybe output 
+
+let scores : (string | number)[];
+scores = ['Programming', 5, 'Software Design', 4]; 
+```
+<br>
 
 
 
