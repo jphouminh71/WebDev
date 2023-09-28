@@ -32,24 +32,27 @@ then event loop brings in the items in the queue FIFO
 
 
 
-function placeOrder(oNum){ 
-    console.log("Customer order",oNum); 
-    cookAndDeliverFood(function(){     
-    console.log("Deliverd food order:",oNum); 
-    }); 
-    } 
+// function placeOrder(oNum){ 
+//     console.log("Customer order",oNum); 
+//     cookAndDeliverFood(function(){     
+//         console.log("Deliverd food order:",oNum); 
+//         }); 
+//     } 
      
-    //Simulate a 5s operation 
-    function cookAndDeliverFood(callback){     
-    setTimeout(callback,5000); 
-    } 
+//     //Simulate a 5s operation 
+//     function cookAndDeliverFood(callback){     
+//         setTimeout(callback,5000); 
+//     } 
      
-    //Simulate User requests; 
-    placeOrder(1); 
-    placeOrder(2); 
-    placeOrder(3); 
-    placeOrder(4); 
-    placeOrder(5); 
+//     //Simulate User requests; 
+//     placeOrder(1); 
+//     placeOrder(2); 
+//     placeOrder(3); 
+//     placeOrder(4); 
+//     placeOrder(5); 
 
 
 /* Dont use them in loops or else the call stack will never empty */
+
+setTimeout(() => console.log("Hello A!"),0);
+console.log("Hello Jon!");

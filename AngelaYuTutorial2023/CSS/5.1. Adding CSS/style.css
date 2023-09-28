@@ -1,0 +1,13 @@
+.green-color {
+    background-color: green
+}
+
+#specialItemLargeText {
+    font-size: large;
+}
+
+/* Attribute Selector */
+/* Select all paragraph elemetents that are draggable. */
+p[draggable]{
+    color:red
+}

@@ -4,7 +4,7 @@
 
 /* Creating a Promise */
 let p = new Promise((resolve,reject) => {
-    let a = 1 + 1; 
+    let a = 1 + 2; 
     if (a == 2) {
         // resolve it, we can pass anything
         resolve('success');
@@ -21,7 +21,7 @@ let p = new Promise((resolve,reject) => {
 p.then((message) => { // catch the resolve
     console.log("this is in the then: " + message);
 }).catch((err) => { // catches any errors, which are the rejection states
-    console.log('this in the catch: ', + err );
+    console.log('this in the catch: ' + err );
 })
 
 
