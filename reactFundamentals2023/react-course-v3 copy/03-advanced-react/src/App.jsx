@@ -1,4 +1,4 @@
-import Starter from "./tutorial/04-project-structure/starter/Navbar";
+import Starter from "./tutorial/11-performance/starter/01-lower-state";
 
 function App() {
   return (

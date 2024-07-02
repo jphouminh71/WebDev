@@ -21,8 +21,8 @@ function FormExample() {
 
   return (
     <section className="card-container">
-      <h1> Login Form </h1>
       <form>
+        <h1> Login Form </h1>
         <input
           name="username"
           type="text"
