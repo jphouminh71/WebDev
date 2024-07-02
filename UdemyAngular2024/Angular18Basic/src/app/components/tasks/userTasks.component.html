@@ -1,0 +1,23 @@
+<card>
+  <section id="tasks">
+    <header>
+      <h2>{{ name }}'s Tasks!</h2>
+      <menu>
+        <button (click)="toggleCreateNewTask()">Add Tasks</button>
+      </menu>
+    </header>
+
+    <!-- Show CreateTaskCompnent if they clicked the button -->
+    @if (showCreateTask) {
+    <create-task (cancel)="toggleCreateNewTask()" [userId]="userId" />
+    }
+
+    <ul>
+      @for(task of selectedUserTasks; track task.id) {
+      <li>
+        <app-task [task]="task"></app-task>
+      </li>
+      }
+    </ul>
+  </section>
+</card>

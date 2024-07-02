@@ -1,0 +1,10 @@
+<card>
+  <div>
+    <button [class.active]="selected" (click)="onSelectUser()">
+      <!-- Dynamic wrapping -->
+      <img [src]="imagePath" [alt]="user.name" />
+      <!-- Traditional string interpolation -->
+      <span> {{ user.name }}</span>
+    </button>
+  </div>
+</card>
