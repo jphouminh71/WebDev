@@ -28,6 +28,14 @@ export class TasksService {
         'Prepare and describe an issue template which will help with project management',
       dueDate: '2024-06-15',
     },
+    {
+      id: 't4',
+      userId: 'u4',
+      title: 'DUMMY',
+      summary:
+        'Prepare and describe an issue template which will help with project management',
+      dueDate: '2024-06-15',
+    },
   ]);
 
   allTasks = this.tasks.asReadonly();
