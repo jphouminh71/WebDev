@@ -1,9 +1,7 @@
 import {
   Component,
-  computed,
   DestroyRef,
-  inject,
-  input,
+  inject
   OnInit,
 } from '@angular/core';
 import { UsersService } from '../users.service';

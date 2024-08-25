@@ -2,7 +2,7 @@
     Takeaways from this example. 
     - observables are postfixed with $ 
     - observers can publish 3 types of values. next | complete | error
-    - observables can define their own custon unsubscribe implementatino by return a function in the subscription definition
+    - observables can define their own custon unsubscribe implementation by return a function in the subscription definition
     - subscribers can choose to to which values they want to to pay attention to when subscribing to an observer. 
     - observables make asynchronous code synchronous 
 */
@@ -14,6 +14,7 @@ class ForeverPublisher {
   private foreverPublishObject$: Observable<string>;
 
   constructor() {
+    // Creating the subsriber implementation.
     this.foreverPublishObject$ = new Observable((subscriber) => {
       try {
         const interval = setInterval(() => {
